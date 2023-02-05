@@ -1,6 +1,10 @@
-import { createStore } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 
 
-const rootReducer = (state)
 
-export const store = createStore(rootReducer)
+export const store = configureStore({
+    reducer: {
+        constacts: [],
+    },
+
+})
