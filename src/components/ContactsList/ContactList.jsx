@@ -7,7 +7,7 @@ export const ContactList = () => {
     const filters = useSelector(getFilterContacts)
 
     const filterUser = () => {
-      return contacts.filter(contact => contact.name.toLowerCase().includes(filters))
+      return contacts.filter(contact => contact.name.toLowerCase().includes(filters.toLowerCase()))
     }
 
     const users = filters === '' ? contacts : filterUser()
